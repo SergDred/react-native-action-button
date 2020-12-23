@@ -26,9 +26,9 @@ export const alignItemsMap = {
 export const isAndroid = Platform.OS === "android";
 
 export function getTouchableComponent(useNativeFeedback) {
-  if (useNativeFeedback === true && isAndroid === true) {
-    return TouchableNativeFeedback;
-  }
+  // if (useNativeFeedback === true && isAndroid === true) {
+  //   return TouchableNativeFeedback;
+  // }
   return TouchableOpacity;
 }
 

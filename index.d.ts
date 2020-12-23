@@ -9,6 +9,8 @@ import {
 export interface ActionButtonProperties extends ViewProperties {
   resetToken?: any,
   active?: boolean,
+  activeButtonText?: string,
+  activeOffsetX: number,
 
   position?: string,
   elevation?: number,
@@ -20,7 +22,8 @@ export interface ActionButtonProperties extends ViewProperties {
   bgOpacity?: number,
   buttonColor?: string,
   buttonTextStyle?: TextStyle,
-  buttonText?: string,
+  buttonText?: string | JSX.Element,
+  text: string,
 
   offsetX?: number,
   offsetY?: number,
