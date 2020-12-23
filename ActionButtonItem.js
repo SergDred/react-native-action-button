@@ -96,11 +96,10 @@ export default class ActionButtonItem extends Component {
       ? {
           height: size,
           marginBottom: spacing,
-          right: this.props.offsetX,
-          borderRadius: this.props.size / 2
+          right: this.props.activeOffsetX,
         }
       : {
-          paddingHorizontal: this.props.offsetX,
+          paddingHorizontal: this.props.activeOffsetX,
           height: size + SHADOW_SPACE + spacing
         };
     return (
@@ -139,7 +138,7 @@ export default class ActionButtonItem extends Component {
     const {
       textContainerStyle,
       hideLabelShadow,
-      offsetX,
+      activeOffsetX,
       parentSize,
       size,
       position,
@@ -154,7 +153,7 @@ export default class ActionButtonItem extends Component {
 
     if (position !== "center") {
       positionStyles[position] =
-        offsetX + (parentSize - size) / 2 + size + spaceBetween;
+      activeOffsetX + (parentSize - size) / 2 + size + spaceBetween;
     } else {
       positionStyles.right = WIDTH / 2 + size / 2 + spaceBetween;
     }
@@ -162,7 +161,6 @@ export default class ActionButtonItem extends Component {
     const textStyles = [
       styles.textContainer,
       positionStyles,
-      !hideShadow && shadowStyle,
       textContainerStyle
     ];
 
@@ -203,15 +201,12 @@ const styles = StyleSheet.create({
     position: "absolute",
     paddingVertical: isAndroid ? 2 : 3,
     paddingHorizontal: 8,
-    borderRadius: 3,
-    borderWidth: StyleSheet.hairlineWidth,
-    borderColor: "#eee",
     backgroundColor: "white",
     height: TEXT_HEIGHT
   },
   text: {
     flex: 1,
     fontSize: 12,
-    color: "#444"
+    color: "#000"
   }
 });
