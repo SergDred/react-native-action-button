@@ -23,7 +23,7 @@ export interface ActionButtonProperties extends ViewProperties {
   buttonColor?: string,
   buttonTextStyle?: TextStyle,
   buttonText?: string | JSX.Element,
-  text: string,
+  text: string | undefined,
 
   offsetX?: number,
   offsetY?: number,

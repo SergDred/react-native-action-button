@@ -363,7 +363,6 @@ ActionButton.defaultProps = {
   activeButtonText: "+",
   bgColor: "transparent",
   bgOpacity: 0.8,
-  activeButtonText: '',
   buttonColor: "rgba(0,0,0,1)",
   buttonTextStyle: {},
   buttonText: "+",
